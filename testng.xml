@@ -1,0 +1,58 @@
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+
+<!--<suite name="SauceDemo Cross-Browser Suite">-->
+
+<!--    &lt;!&ndash; TEST BLOCK 1: CHROME &ndash;&gt;-->
+<!--    <test name="Run on Chrome">-->
+<!--        &lt;!&ndash; This line injects the word 'chrome' into your @Parameters tag! &ndash;&gt;-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="com.azhar.tests.LoginTest"/>-->
+<!--            <class name="com.azhar.tests.InventoryTest"/>-->
+<!--            <class name="com.azhar.tests.CartTest"/>-->
+<!--            <class name="com.azhar.tests.CheckoutTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    &lt;!&ndash; TEST BLOCK 2: MICROSOFT EDGE &ndash;&gt;-->
+<!--    <test name="Run on Edge">-->
+<!--        &lt;!&ndash; This line injects the word 'edge' into your @Parameters tag! &ndash;&gt;-->
+<!--        <parameter name="browser" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="com.azhar.tests.LoginTest"/>-->
+<!--            <class name="com.azhar.tests.InventoryTest"/>-->
+<!--            <class name="com.azhar.tests.CartTest"/>-->
+<!--            <class name="com.azhar.tests.CheckoutTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--</suite>-->
+
+        <!-- For parallel execution  -->
+
+        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+        <!-- 1. THE SWITCH: We added parallel="tests" and thread-count="2" -->
+<suite name="SauceDemo Cross-Browser Suite" parallel="tests" thread-count="2">
+
+<test name="Run on Chrome">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="com.azhar.tests.LoginTest"/>
+        <class name="com.azhar.tests.InventoryTest"/>
+        <class name="com.azhar.tests.CartTest"/>
+        <class name="com.azhar.tests.CheckoutTest"/>
+    </classes>
+</test>
+
+<test name="Run on Edge">
+    <parameter name="browser" value="edge"/>
+    <classes>
+        <class name="com.azhar.tests.LoginTest"/>
+        <class name="com.azhar.tests.InventoryTest"/>
+        <class name="com.azhar.tests.CartTest"/>
+        <class name="com.azhar.tests.CheckoutTest"/>
+    </classes>
+</test>
+
+</suite>
