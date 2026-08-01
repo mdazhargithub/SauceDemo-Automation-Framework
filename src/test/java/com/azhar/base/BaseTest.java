@@ -287,12 +287,12 @@ public class BaseTest {
 
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito", "--disable-notifications", "--headless");
+            options.addArguments("--incognito", "--disable-notifications", "--headless", "--no-sandbox", "--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
 
         } else if (browser.equalsIgnoreCase("edge")) {
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--inprivate", "--disable-notifications", "--headless");
+            options.addArguments("--inprivate", "--disable-notifications", "--headless", "--no-sandbox", "--disable-dev-shm-usage");
             driver = new EdgeDriver(options);
 
         } else {
